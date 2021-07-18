@@ -1,0 +1,93 @@
+<div class="container p-1">
+
+  <div class="row">
+    <div class="col">
+      <h1 class="display-1">Invoices List</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p class="lead">
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="triggerModal(modalData)">
+        Create Invoice
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col pt-5">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Description</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Sender</th>
+          <th scope="col">Receiver</th>
+          <th scope="col">Payed</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let invoice of invoices; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ invoice.description }}</td>
+          <td>{{ invoice.amount }}</td>
+          <td>{{ invoice.sender }}</td>
+          <td>{{ invoice.receiver }}</td>
+          <td>{{ invoice.payed }}</td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="deleteInvoice(invoice.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <ng-template #modalData let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Angular Bootstrap Modal Popup</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="mb-3">
+        <label for="senderFormControlInput" class="form-label">Sender</label>
+        <input type="text" class="form-control" id="senderFormControlInput" placeholder="Sender"
+               [(ngModel)]="invoiceRequest.sender">
+      </div>
+      <div class="mb-3">
+        <label for="receiverFormControlInput" class="form-label">Receiver</label>
+        <input type="text" class="form-control" id="receiverFormControlInput" placeholder="Receiver"
+               [(ngModel)]="invoiceRequest.receiver">
+      </div>
+      <div class="mb-3">
+        <label for="amountFormControlInput" class="form-label">Amount</label>
+        <input type="number" class="form-control" id="amountFormControlInput" placeholder="Amount" min="0"
+               [(ngModel)]="invoiceRequest.amount">
+      </div>
+      <div class="mb-3">
+        <label for="descriptionFormControlTextarea" class="form-label">Description</label>
+        <textarea class="form-control" id="descriptionFormControlTextarea" rows="3"
+                  [(ngModel)]="invoiceRequest.description"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+      <button type="button" class="btn btn-primary" (click)="createInvoice(modal)">Create</button>
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/homework14-commons-main/fasstrackit-commons.iml" filepath="$PROJECT_DIR$/homework14-commons-main/fasstrackit-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/homewotk15.iml" filepath="$PROJECT_DIR$/.idea/homewotk15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13-invoice-app-main/invoice-api-client/invoice-api-client.iml" filepath="$PROJECT_DIR$/homework13-invoice-app-main/invoice-api-client/invoice-api-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13-invoice-app-main/invoice-app.iml" filepath="$PROJECT_DIR$/homework13-invoice-app-main/invoice-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13-invoice-app-main/invoice-service/invoice-service.iml" filepath="$PROJECT_DIR$/homework13-invoice-app-main/invoice-service/invoice-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13-payment-app-main/payment-api-client/payment-api-client.iml" filepath="$PROJECT_DIR$/homework13-payment-app-main/payment-api-client/payment-api-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13-payment-app-main/payment-app.iml" filepath="$PROJECT_DIR$/homework13-payment-app-main/payment-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework13-payment-app-main/payment-service/payment-service.iml" filepath="$PROJECT_DIR$/homework13-payment-app-main/payment-service/payment-service.iml" />
+    </modules>
+  </component>
+</project>
